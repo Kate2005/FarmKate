@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &264911834097382078
+--- !u!1 &4415040239944814500
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,7 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 264911834097382079}
+  - component: {fileID: 4415040239944814501}
+  - component: {fileID: 7566150635760072758}
   m_Layer: 0
   m_Name: Windmill
   m_TagString: Untagged
@@ -16,22 +17,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &264911834097382079
+--- !u!4 &4415040239944814501
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834097382078}
-  m_LocalRotation: {x: 0, y: 0.17364816, z: 0, w: 0.9848078}
-  m_LocalPosition: {x: -40, y: 0.17, z: -16}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 4415040239944814500}
+  m_LocalRotation: {x: 0, y: 0.10452846, z: 0, w: 0.9945219}
+  m_LocalPosition: {x: -40, y: 0, z: -16}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
-  - {fileID: 264911834760992431}
+  - {fileID: 4415040240522455989}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 20, z: 0}
---- !u!1 &264911834761284237
+  m_LocalEulerAnglesHint: {x: 0, y: 12, z: 0}
+--- !u!114 &7566150635760072758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415040239944814500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08fa4e4bdda89f54eb1c05b4c11faa57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 5
+  rotateAxis: {x: 0, y: 1, z: 0}
+--- !u!1 &4415040240522295189
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,46 +54,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 264911834760992429}
-  - component: {fileID: 264911834758092429}
-  - component: {fileID: 264911834759091277}
-  - component: {fileID: 1020928855}
+  - component: {fileID: 4415040240522455989}
+  - component: {fileID: 4415040240521128853}
+  - component: {fileID: 4415040240520030549}
   m_Layer: 0
-  m_Name: Wheel
+  m_Name: Windmill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &264911834760992429
+--- !u!4 &4415040240522455989
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284237}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.07304573, y: -2.7715032, z: 7.49272}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
-  m_Father: {fileID: 264911834760992431}
+  m_GameObject: {fileID: 4415040240522295189}
+  m_LocalRotation: {x: -0.4184126, y: 0.57007307, z: 0.5698734, w: 0.41855943}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4415040240522455991}
+  m_Father: {fileID: 4415040239944814501}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &264911834758092429
+  m_LocalEulerAnglesHint: {x: -89.99999, y: 180, z: -72.59299}
+--- !u!33 &4415040240521128853
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284237}
-  m_Mesh: {fileID: 4300002, guid: 58f6635e07a7ff840b21ff4932c0914d, type: 3}
---- !u!23 &264911834759091277
+  m_GameObject: {fileID: 4415040240522295189}
+  m_Mesh: {fileID: 4300000, guid: 58f6635e07a7ff840b21ff4932c0914d, type: 3}
+--- !u!23 &4415040240520030549
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284237}
+  m_GameObject: {fileID: 4415040240522295189}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -114,21 +129,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1020928855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08fa4e4bdda89f54eb1c05b4c11faa57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateDirection: {x: 0, y: 1, z: 0}
-  rotateSpeed: 40
---- !u!1 &264911834761284239
+--- !u!1 &4415040240522295191
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,46 +137,45 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 264911834760992431}
-  - component: {fileID: 264911834758092431}
-  - component: {fileID: 264911834759091279}
+  - component: {fileID: 4415040240522455991}
+  - component: {fileID: 4415040240521128855}
+  - component: {fileID: 4415040240520030551}
   m_Layer: 0
-  m_Name: Windmill
+  m_Name: Wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &264911834760992431
+--- !u!4 &4415040240522455991
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284239}
-  m_LocalRotation: {x: -0.4184126, y: 0.57007307, z: 0.5698734, w: 0.41855943}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 264911834760992429}
-  m_Father: {fileID: 264911834097382079}
+  m_GameObject: {fileID: 4415040240522295191}
+  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
+  m_LocalPosition: {x: 0.06996071, y: -2.7703328, z: 7.570132}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_Children: []
+  m_Father: {fileID: 4415040240522455989}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.99999, y: 180, z: -72.59299}
---- !u!33 &264911834758092431
+  m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
+--- !u!33 &4415040240521128855
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284239}
-  m_Mesh: {fileID: 4300000, guid: 58f6635e07a7ff840b21ff4932c0914d, type: 3}
---- !u!23 &264911834759091279
+  m_GameObject: {fileID: 4415040240522295191}
+  m_Mesh: {fileID: 4300002, guid: 58f6635e07a7ff840b21ff4932c0914d, type: 3}
+--- !u!23 &4415040240520030551
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264911834761284239}
+  m_GameObject: {fileID: 4415040240522295191}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
