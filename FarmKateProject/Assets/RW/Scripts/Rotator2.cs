@@ -15,6 +15,6 @@ public class Rotator2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HeyBaleTrans.transform.Rotate(rotateAxis * rotateAxis * Time.deltaTme);
+       HeyBaleTrans.transform.Rotate(rotateAxis * rotateSpeed* Time.deltaTime);
     }
 }

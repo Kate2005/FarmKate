@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TractorMovement : MonoBehaviour
+public class TractorMovement1 : MonoBehaviour
 {
     [Header("Shoot Property")]
     [SerializeField] private GameObject senoPrefab;
@@ -18,7 +18,7 @@ public class TractorMovement : MonoBehaviour
 
     void Start()
     {
-        
+        nextShoot = shootRate;
     }
 
     
@@ -35,7 +35,7 @@ public class TractorMovement : MonoBehaviour
                 transform.Translate(Vector3.left * speed * direction * Time.deltaTime);
             }
         }
-        nextShoot -= Time.deltaTime;
+        nextShoot += Time.deltaTime;
     }
 
 
@@ -55,11 +55,11 @@ public class TractorMovement : MonoBehaviour
     }
     public void PressShoot()
     {
-        if (nextShoot < 0)
+        if (nextShoot < shootRate)
         {
             GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
             Destroy(seno, 15f);
-            nextShoot = shootRate;
+            nextShoot = 0;
         }
     }
 
