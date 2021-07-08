@@ -18,10 +18,10 @@ public class TractorMovement1 : MonoBehaviour
 
     void Start()
     {
-        nextShoot = shootRate;
+
     }
 
-    
+
     void Update()
     {
         //if (((transform.position.x > -bounds) && (direction == 1f)) || ((transform.position.x < bounds) && (direction == -1f)))
@@ -35,7 +35,7 @@ public class TractorMovement1 : MonoBehaviour
                 transform.Translate(Vector3.left * speed * direction * Time.deltaTime);
             }
         }
-        nextShoot += Time.deltaTime;
+        nextShoot -= Time.deltaTime;
     }
 
 
@@ -55,11 +55,11 @@ public class TractorMovement1 : MonoBehaviour
     }
     public void PressShoot()
     {
-        if (nextShoot < shootRate)
+        if (Time.time > nextShoot)
         {
             GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
             Destroy(seno, 15f);
-            nextShoot = 0;
+            nextShoot = Time.time + shootRate;
         }
     }
 

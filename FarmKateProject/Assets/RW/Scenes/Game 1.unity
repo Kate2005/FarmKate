@@ -789,18 +789,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a57471f70742dbc4cb0bc290cdba5205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &687949984 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5349907148890661137, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-  m_PrefabInstance: {fileID: 188668874193625256}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &833876420 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
   m_PrefabInstance: {fileID: 188668874193625256}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8d56379f1b7340468b525c28dc1e00f, type: 3}
   m_Name: 
@@ -1311,34 +1306,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2105002378, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105002378, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+      propertyPath: shootRate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105002378, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+      propertyPath: senoPrefab
+      value: 
+      objectReference: {fileID: 1106723916}
     - target: {fileID: 1851757180499905259, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
       propertyPath: m_Name
       value: Hay Machine
       objectReference: {fileID: 0}
     - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: bounds
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: shootRate
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: shootRote
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
       propertyPath: senoPrefab
       value: 
       objectReference: {fileID: 1106723916}
-    - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 687949984}
-    - target: {fileID: 5658019205323994230, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8045026923869767676, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1383,12 +1374,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8761437744165686671, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
-      propertyPath: m_Materials.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2913441431119756185, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
 --- !u!1001 &1482518576998064217
 PrefabInstance:
