@@ -9,6 +9,7 @@ public class TractorMovement1 : MonoBehaviour
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float shootRate;
     private float nextShoot;
+    
 
     [Header("Tractor Property")]
     [SerializeField] private float speed;
@@ -55,12 +56,13 @@ public class TractorMovement1 : MonoBehaviour
     }
     public void PressShoot()
     {
-        if (Time.time > nextShoot)
+        if (nextShoot < 0)
         {
             GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
             Destroy(seno, 15f);
-            nextShoot = Time.time + shootRate;
+            nextShoot = shootRate;
         }
     }
+
 
 }

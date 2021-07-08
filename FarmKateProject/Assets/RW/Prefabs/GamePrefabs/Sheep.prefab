@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &972894905963271588
+--- !u!1 &7031035752795923929
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,45 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 972894905963497860}
-  - component: {fileID: 972894905960073636}
-  - component: {fileID: 972894905961073508}
+  - component: {fileID: 7031035752796355065}
+  - component: {fileID: 7031035752792930777}
+  - component: {fileID: 7031035752793930521}
+  - component: {fileID: 3816105662141421243}
+  - component: {fileID: 5673911894537273638}
+  - component: {fileID: 7017982904581488158}
   m_Layer: 0
-  m_Name: Hay Bale
+  m_Name: Sheep
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &972894905963497860
+--- !u!4 &7031035752796355065
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972894905963271588}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 7031035752795923929}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2183602644254191638}
+  m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &972894905960073636
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
+--- !u!33 &7031035752792930777
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972894905963271588}
-  m_Mesh: {fileID: 4300000, guid: af7e099ccf40c8046b7d720e9d8df558, type: 3}
---- !u!23 &972894905961073508
+  m_GameObject: {fileID: 7031035752795923929}
+  m_Mesh: {fileID: 4300000, guid: fee0f50f91e9d7d4a84a85232e663d4a, type: 3}
+--- !u!23 &7031035752793930521
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 972894905963271588}
+  m_GameObject: {fileID: 7031035752795923929}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,47 +85,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &6071301338592397231
-GameObject:
+--- !u!65 &3816105662141421243
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2183602644254191638}
-  - component: {fileID: 6024800835583616509}
-  - component: {fileID: 3716891521327999845}
-  - component: {fileID: 9071931200411821264}
-  m_Layer: 0
-  m_Name: HayBale
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2183602644254191638
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6071301338592397231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 972894905963497860}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &6024800835583616509
+  m_GameObject: {fileID: 7031035752795923929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3932397, y: 4.491644, z: 2.5160325}
+  m_Center: {x: -0.00000011920929, y: -0.09570205, z: 1.2160721}
+--- !u!54 &5673911894537273638
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6071301338592397231}
+  m_GameObject: {fileID: 7031035752795923929}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -132,32 +114,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3716891521327999845
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6071301338592397231}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.615829, y: 1.5435184, z: 1.552382}
-  m_Center: {x: -0.007999182, y: 0.014671861, z: 0.01998764}
---- !u!114 &9071931200411821264
+--- !u!114 &7017982904581488158
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6071301338592397231}
+  m_GameObject: {fileID: 7031035752795923929}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0551852452f0b841a077e73182f3040, type: 3}
+  m_Script: {fileID: 11500000, guid: de28dcc4e4c2e8446954a6a48e8e5a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 150
-  rotateDirection: {x: 1, y: 0, z: 0}
-  moveSpeed: 20
-  moveDirection: {x: 0, y: 0, z: 1}
+  moveSpeed: 7
+  moveDirection: {x: 0, y: -1, z: 0}
