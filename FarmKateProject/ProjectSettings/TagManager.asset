@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Seno
   - SenoDestroydTrigger
+  - SenoDestroys
   layers:
   - Default
   - TransparentFX

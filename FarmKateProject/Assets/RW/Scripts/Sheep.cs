@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sheep : MonoBehaviour
+public class Sheep: MonoBehaviour
 {
     [SerializeField] private float moveSpeed;
     [SerializeField] private Vector3 moveDirection;

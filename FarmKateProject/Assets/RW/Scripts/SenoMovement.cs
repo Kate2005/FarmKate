@@ -9,12 +9,13 @@ public class SenoMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private Vector3 moveDirection;
     private Transform senoModel;
+
     void Start()
     {
         senoModel = transform.GetChild(0);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         transform.Translate(moveSpeed * moveDirection * Time.deltaTime);
@@ -31,10 +32,15 @@ public class SenoMovement : MonoBehaviour
         //{
         //    Destroy(gameObject);          
         //}
+        
+        private void OnCollisionEnter(Collider other)
+        {
+            if (other.gameObject.tag == "SenoDestroys")//Other.CompareTag("SenoDestroydTrigger")
+            {
+                Destroy(gameObject);
+            }
 
-
-
-
+        }
     }
 
 
