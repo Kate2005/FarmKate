@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class SenoDestroys : MonoBehaviour
 {
-  
-  private void Collision(Collider other)
+    private Transform senoModel;
+
+    void Start()
+    {
+        senoModel = transform.GetChild(0);
+    }
+
+    private void CollisionExit(Collision other)
     {
         if(other.gameObject.name == "Hay Bale")
         {

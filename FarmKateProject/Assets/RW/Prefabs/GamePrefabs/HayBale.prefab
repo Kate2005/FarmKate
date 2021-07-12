@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 972894905963497860}
   - component: {fileID: 972894905960073636}
   - component: {fileID: 972894905961073508}
+  - component: {fileID: 1343047929}
+  - component: {fileID: 1343047930}
   m_Layer: 0
   m_Name: Hay Bale
   m_TagString: Untagged
@@ -82,6 +84,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1343047929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972894905963271588}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0551852452f0b841a077e73182f3040, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotateSpeed: 0
+  rotateDirection: {x: 0, y: 0, z: 0}
+  moveSpeed: 0
+  moveDirection: {x: 0, y: 0, z: 0}
+--- !u!114 &1343047930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 972894905963271588}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac35f920e9fef9742bca4230b9ec4d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6071301338592397231
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +124,7 @@ GameObject:
   - component: {fileID: 6024800835583616509}
   - component: {fileID: 3716891521327999845}
   - component: {fileID: 9071931200411821264}
+  - component: {fileID: 1106723921}
   m_Layer: 0
   m_Name: HayBale
   m_TagString: SenoDestroydTrigger
@@ -140,7 +171,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6071301338592397231}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.615829, y: 1.5435184, z: 1.552382}
@@ -161,3 +192,15 @@ MonoBehaviour:
   rotateDirection: {x: 1, y: 0, z: 0}
   moveSpeed: 20
   moveDirection: {x: 0, y: 0, z: 1}
+--- !u!114 &1106723921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071301338592397231}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac35f920e9fef9742bca4230b9ec4d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
