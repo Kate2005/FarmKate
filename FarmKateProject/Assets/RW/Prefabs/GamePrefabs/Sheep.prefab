@@ -128,3 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   moveDirection: {x: 0, y: -1, z: 0}
+  force: 800
+  particlesPrefab: {fileID: 3381680214258820151, guid: ae98f32e9e347de41ab4346305dcf79d, type: 3}

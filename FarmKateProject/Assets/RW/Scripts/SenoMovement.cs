@@ -27,8 +27,9 @@ public class SenoMovement : MonoBehaviour
         Sheep sheep = other.GetComponent<Sheep>();
         if (sheep != null)
         {
+            sheep.SaveSheep();
             Destroy(gameObject);
-            Destroy(other.gameObject);
+           // Destroy(other.gameObject); 
         }
 
         if (other.gameObject.tag == "SenoDestroydTrigger")//Other.CompareTag("SenoDestroydTrigger")
