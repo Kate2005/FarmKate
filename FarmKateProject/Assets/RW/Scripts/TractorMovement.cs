@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class TractorMovement : MonoBehaviour
 {
-    [Header("Shoot Property")]
+    enum TractorCondition { Move, Stay}
+    TractorCondition tractorCondition = TractorCondition.Stay;
+
+
+
     [SerializeField] private GameObject senoPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float shootRate;
@@ -15,7 +19,7 @@ public class TractorMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float bounds;
     private float direction;
-    private bool isPress;
+    //private bool isPress;
 
     void Start()
     {
@@ -25,7 +29,7 @@ public class TractorMovement : MonoBehaviour
     
     void Update()
     {
-        if (isPress)
+        if (tractorCondition == TractorCondition.Move)
         {
             if (((transform.position.x > -bounds) && (direction == 1f)) || ((transform.position.x < bounds) && (direction == -1f)))
             {
@@ -39,16 +43,16 @@ public class TractorMovement : MonoBehaviour
     public void PressLeft()
     {
         direction = 1f;
-        isPress = true;
+        tractorCondition = TractorCondition.Move;
     }
     public void PressRight()
     {
         direction = -1f;
-        isPress = true;
+        tractorCondition = TractorCondition.Move;
     }
     public void StopPress()
     {
-        isPress = false;
+        tractorCondition = TractorCondition.Stay;
     }
     public void PressShoot()
     {
