@@ -1944,6 +1944,10 @@ PrefabInstance:
       value: Hay Machine
       objectReference: {fileID: 0}
     - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+      propertyPath: shootRate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
       propertyPath: senoPrefab
       value: 
       objectReference: {fileID: 6071301338592397231, guid: 7015a6e304a3c6f4788f5a9aecaf4c6b, type: 3}

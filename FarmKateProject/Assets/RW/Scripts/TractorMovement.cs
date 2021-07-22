@@ -8,6 +8,8 @@ public class TractorMovement : MonoBehaviour
     TractorCondition tractorCondition = TractorCondition.Stay;
 
 
+    
+    
 
     [SerializeField] private GameObject senoPrefab;
     [SerializeField] private Transform spawnPoint;
@@ -20,10 +22,13 @@ public class TractorMovement : MonoBehaviour
     [SerializeField] private float bounds;
     private float direction;
     //private bool isPress;
+    //[SerializeField] private float maxAmmo;
+    // private int currentAmmo;
+    [SerializeField] private int Ammo = 5;
 
     void Start()
     {
-        
+        //currentAmmo = maxAmmo;
     }
 
     
@@ -36,7 +41,11 @@ public class TractorMovement : MonoBehaviour
                 transform.Translate(Vector3.left * speed * direction * Time.deltaTime);
             }
         }
-        
+        //if (currentAmmo <= 0)
+        //{
+        //    StartCoroutine(Spawn()); 
+            
+        //}
     }
 
 
@@ -63,8 +72,16 @@ public class TractorMovement : MonoBehaviour
             Destroy(seno, 15f);
             seno.transform.SetParent(senoContainer.transform);
 
-
         }
+        if (Ammo > 0)
+        {
+            Shoot ();
+            Ammo = Ammo - 1;
+        }
+            
+
+
+        
     }
 
 }
