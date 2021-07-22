@@ -4,18 +4,21 @@ using UnityEngine;
 
 public class Sheep: MonoBehaviour
 {
-    [SerializeField] private float startSpeed; 
-    private float moveSpeed;
+    [SerializeField] private SheepProperty sheepProperty;
+
+    //[SerializeField] private float startSpeed;    
     [SerializeField] private Vector3 moveDirection;
-    [SerializeField] private float force;
-    private Rigidbody rb;
-    private BoxCollider bc;
+    [SerializeField] private float force;  
     [SerializeField] private GameObject particlesPrefab;
     [SerializeField] private Vector3 sheepOffset;
     [SerializeField] private float jumpForce;
-    //public enum Movement { move, stay, jump}
-    //Movement movement = Movement.move
-    
+    private float moveSpeed;
+    private Rigidbody rb;
+    private BoxCollider bc;
+    private MeshRenderer mr;
+    //public enum Movement { move, stay, jump }
+    //Movement movement = Movement.move;
+    //Movement stayMovement = Movement.stay;
     //идти или со€ть стартовое значение енума
     //создать екземпл€р и присвоить значение
     private void Awake()
@@ -23,11 +26,17 @@ public class Sheep: MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         bc  = GetComponent<BoxCollider>();
+        mr = GetComponent<MeshRenderer>();
     }
 
     private void Start()
     {
-        moveSpeed = startSpeed;
+        moveSpeed = sheepProperty.Speed;
+        mr.material = sheepProperty.Material;
+        Debug.Log(sheepProperty.Name);//get
+        sheepProperty.Name = "Shon";//set
+        Debug.Log(sheepProperty.Name);//get
+
     }
 
     void Update()
@@ -47,8 +56,8 @@ public class Sheep: MonoBehaviour
         moveSpeed = 0;//сделать состо€ние стоп//1. ќтключить скорость овце на 0 или как в тракторе!!!!!!!!
         //if (stayMovement == Movement.stay)
         //{
-        //    moveSpeed = false; 
-       // }
+        //    moveSpeed = 0;
+        //}
         bc.enabled = false;//2. отключить бокс коллайдер овце
         rb.useGravity = false;//3. отключить гравитацию
         //4. —паунить патикл со здвигом над овцой или за овцой
@@ -65,13 +74,13 @@ public class Sheep: MonoBehaviour
         //{
             rb.AddForce(new Vector3(0f, 1f, -1f) * jumpForce);
         //}
-        
+
     }
     public void LandThoughtWater()
     {
         rb.isKinematic = true;
-        moveSpeed = startSpeed;//состо€ние идти
-        //moveMovement = Movement.move
+        moveSpeed = sheepProperty.Speed;//состо€ние идти
+        //movement = Movement.move
     }
 
 }

@@ -58,26 +58,26 @@ public class MyEnym : MonoBehaviour
     //}
 
 
-    enum Presidents { Pytin = 65, Obama = 61, Tramp = 49 } // обьявление перечисления(создание)
+    //enum Presidents { Pytin = 65, Obama = 61, Tramp = 49 } // обьявление перечисления(создание)
 
-    Presidents myPresident = Presidents.Tramp; // Создание экземпляра перечисления И присвоили значения
-    Presidents russionPresident = Presidents.Pytin; //// Создание еще одного экземпляра перечисления
+    //Presidents myPresident = Presidents.Tramp; // Создание экземпляра перечисления И присвоили значения
+    //Presidents russionPresident = Presidents.Pytin; //// Создание еще одного экземпляра перечисления
 
-    private void Awake()
-    {
-        if (myPresident == Presidents.Pytin) //сравнение по состоянию(имени)
-        {
-            print("Тикай");
-        }
+    //private void Awake()
+    //{
+    //    if (myPresident == Presidents.Pytin) //сравнение по состоянию(имени)
+    //    {
+    //        print("Тикай");
+    //    }
 
-        if ((int)myPresident >= 60)  // сравниваем значение
-        {
-            print("Опытный лидер");
-        }
-        else
-        {
-            print("НЕ Опытный лидер");
-        }
+    //    if ((int)myPresident >= 60)  // сравниваем значение
+    //    {
+    //        print("Опытный лидер");
+    //    }
+    //    else
+    //    {
+    //        print("НЕ Опытный лидер");
+    //    }
 
-    }
+    //}
 }

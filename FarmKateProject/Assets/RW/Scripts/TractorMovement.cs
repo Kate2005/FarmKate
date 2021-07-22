@@ -73,11 +73,11 @@ public class TractorMovement : MonoBehaviour
             seno.transform.SetParent(senoContainer.transform);
 
         }
-        if (Ammo > 0)
-        {
-            Shoot ();
-            Ammo = Ammo - 1;
-        }
+        //if (Ammo > 0)
+        //{
+        //    Shoot ();
+        //    Ammo = Ammo - 1;
+        //}
             
 
 
