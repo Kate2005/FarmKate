@@ -8,7 +8,9 @@ public class SheepProperty : ScriptableObject
     [SerializeField] private string sheepName;
     [SerializeField] private float speed;
     [SerializeField] private Material material;
-
+    [SerializeField] private float size;
+    [SerializeField] private List<Transform> propertyPoints;
+    
     public string Name
     {
         get
@@ -42,6 +44,17 @@ public class SheepProperty : ScriptableObject
     
     //public Material Material {get{return matirial;}}//короткая форма записи       
     public Material Material => material; // get
-
+    public float Size
+    {
+        get 
+        {
+            return size;
+        }
+        set
+        {
+            size = value;
+        }
+    }
+   
 }
 

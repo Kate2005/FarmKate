@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: GreenSheepProperty
   m_EditorClassIdentifier: 
   sheepName: Shon
-  speed: 15
+  speed: 10
   material: {fileID: 2100000, guid: 138841ef84ddc02448b1ddfe834d35f0, type: 2}
+  size: 10
+  propertyPoints: []

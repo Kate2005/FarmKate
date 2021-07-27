@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sheep: MonoBehaviour
+public class Sheep : MonoBehaviour
 {
     [SerializeField] private SheepProperty sheepProperty;
 
     //[SerializeField] private float startSpeed;    
     [SerializeField] private Vector3 moveDirection;
-    [SerializeField] private float force;  
+    [SerializeField] private float force;
     [SerializeField] private GameObject particlesPrefab;
     [SerializeField] private Vector3 sheepOffset;
     [SerializeField] private float jumpForce;
@@ -25,7 +25,7 @@ public class Sheep: MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody>();
-        bc  = GetComponent<BoxCollider>();
+        bc = GetComponent<BoxCollider>();
         mr = GetComponent<MeshRenderer>();
     }
 
@@ -33,6 +33,7 @@ public class Sheep: MonoBehaviour
     {
         moveSpeed = sheepProperty.Speed;
         mr.material = sheepProperty.Material;
+        
         Debug.Log(sheepProperty.Name);//get
         sheepProperty.Name = "Shon";//set
         Debug.Log(sheepProperty.Name);//get
@@ -44,13 +45,13 @@ public class Sheep: MonoBehaviour
         //проверить состояние и идти только если состояние идти
         //if (movement == Movement.move)
         //{
-            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
         //}
     }
     public void SaveSheep()
     {
-       
-        
+
+
         rb.isKinematic = false;
         rb.AddForce(Vector3.up * force);
         moveSpeed = 0;//сделать состояние стоп//1. Отключить скорость овце на 0 или как в тракторе!!!!!!!!
@@ -63,8 +64,8 @@ public class Sheep: MonoBehaviour
         //4. Спаунить патикл со здвигом над овцой или за овцой
         //спауним патикл в позиции овцы + sheepOffset
         GameObject particle = Instantiate(particlesPrefab, transform.position + sheepOffset, particlesPrefab.transform.rotation); //senoPrefab.transform.rotation
-            Destroy(particle, 2f);
-            Destroy(gameObject, 0.9f);               
+        Destroy(particle, 2f);
+        Destroy(gameObject, 0.9f);
     }
     public void JumpThoughtWater()
     {
@@ -72,7 +73,7 @@ public class Sheep: MonoBehaviour
         moveSpeed = 0;
         //if (stayMovement == Movement.stay)
         //{
-            rb.AddForce(new Vector3(0f, 1f, -1f) * jumpForce);
+        rb.AddForce(new Vector3(0f, 1f, -1f) * jumpForce);
         //}
 
     }
@@ -82,5 +83,10 @@ public class Sheep: MonoBehaviour
         moveSpeed = sheepProperty.Speed;//состояние идти
         //movement = Movement.move
     }
-
+    public void Size()
+    {
+       
+        transform.localScale = new Vector3(1.2f, 0, 0);
+       
+    }
 }

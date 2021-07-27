@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: RedSheepProperty
   m_EditorClassIdentifier: 
   sheepName: Shon
-  speed: 25
+  speed: 15
   material: {fileID: 2100000, guid: df94ad1deec84cb41b17d341537a517c, type: 2}
+  size: 5
+  propertyPoints: []

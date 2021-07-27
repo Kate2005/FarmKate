@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2308a32db410143a4842a00153c3ed, type: 3}
   m_Name: WhiteSheepProperty
   m_EditorClassIdentifier: 
-  sheepName: 
+  sheepName: Shon
   speed: 5
   material: {fileID: 2100000, guid: 99cb819c0582bc4419d043e35f8c5716, type: 2}
+  size: 10
+  propertyPoints: []

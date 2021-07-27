@@ -24,7 +24,7 @@ public class TractorMovement : MonoBehaviour
     //private bool isPress;
     //[SerializeField] private float maxAmmo;
     // private int currentAmmo;
-    [SerializeField] private int Ammo = 5;
+    //[SerializeField] private int Ammo = 5;
 
     void Start()
     {
