@@ -15,5 +15,4 @@ MonoBehaviour:
   sheepName: Shon
   speed: 5
   material: {fileID: 2100000, guid: 99cb819c0582bc4419d043e35f8c5716, type: 2}
-  size: 10
-  propertyPoints: []
+  size: 1

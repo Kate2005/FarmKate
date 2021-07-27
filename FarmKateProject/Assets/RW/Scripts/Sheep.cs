@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Sheep : MonoBehaviour
 {
-    [SerializeField] private SheepProperty sheepProperty;
+    [SerializeField] private List<SheepProperty> sheepProperty;
+    //[SerializeField] private SheepProperty sheepProperty;
 
     //[SerializeField] private float startSpeed;    
     [SerializeField] private Vector3 moveDirection;
@@ -16,6 +17,10 @@ public class Sheep : MonoBehaviour
     private Rigidbody rb;
     private BoxCollider bc;
     private MeshRenderer mr;
+    int randomSheepPropertyIndex;
+    [SerializeField] private SoundManeger soundManeger;
+
+
     //public enum Movement { move, stay, jump }
     //Movement movement = Movement.move;
     //Movement stayMovement = Movement.stay;
@@ -31,12 +36,16 @@ public class Sheep : MonoBehaviour
 
     private void Start()
     {
-        moveSpeed = sheepProperty.Speed;
-        mr.material = sheepProperty.Material;
-        
-        Debug.Log(sheepProperty.Name);//get
-        sheepProperty.Name = "Shon";//set
-        Debug.Log(sheepProperty.Name);//get
+        randomSheepPropertyIndex = Random.Range(0, sheepProperty.Count);
+      
+
+        moveSpeed = sheepProperty[randomSheepPropertyIndex].Speed;
+        mr.material = sheepProperty[randomSheepPropertyIndex].Material;
+        transform.localScale = sheepProperty[randomSheepPropertyIndex].Size;
+
+        Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
+        sheepProperty[randomSheepPropertyIndex].Name = "Shon";//set
+        Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
 
     }
 
@@ -66,6 +75,8 @@ public class Sheep : MonoBehaviour
         GameObject particle = Instantiate(particlesPrefab, transform.position + sheepOffset, particlesPrefab.transform.rotation); //senoPrefab.transform.rotation
         Destroy(particle, 2f);
         Destroy(gameObject, 0.9f);
+
+        soundManeger.PlaySheepHitClip();
     }
     public void JumpThoughtWater()
     {
@@ -80,13 +91,8 @@ public class Sheep : MonoBehaviour
     public void LandThoughtWater()
     {
         rb.isKinematic = true;
-        moveSpeed = sheepProperty.Speed;//состояние идти
+        moveSpeed = sheepProperty[randomSheepPropertyIndex].Speed;//состояние идти
         //movement = Movement.move
     }
-    public void Size()
-    {
-       
-        transform.localScale = new Vector3(1.2f, 0, 0);
-       
-    }
+    
 }

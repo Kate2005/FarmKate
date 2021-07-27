@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8045026923869767676}
   - component: {fileID: 4906544508845455895}
-  - component: {fileID: 2105002378}
   m_Layer: 0
   m_Name: Hay Machine
   m_TagString: Untagged
@@ -48,27 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d56379f1b7340468b525c28dc1e00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  senoPrefab: {fileID: 0}
+  senoPrefab: {fileID: 6071301338592397231, guid: 7015a6e304a3c6f4788f5a9aecaf4c6b, type: 3}
   spawnPoint: {fileID: 5349907148890661137}
   shootRate: 0
   senoContainer: {fileID: 0}
-  speed: 20
-  bounds: 22
---- !u!114 &2105002378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851757180499905259}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1b16d97fcb11e24fae55749c8567737, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  senoPrefab: {fileID: 0}
-  spawnPoint: {fileID: 5349907148890661137}
-  shootRate: 1
   speed: 20
   bounds: 22
 --- !u!1 &4777938758433084641

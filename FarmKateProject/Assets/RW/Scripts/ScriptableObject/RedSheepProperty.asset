@@ -10,10 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a2308a32db410143a4842a00153c3ed, type: 3}
-  m_Name: GreenSheepProperty
+  m_Name: RedSheepProperty
   m_EditorClassIdentifier: 
   sheepName: Shon
-  speed: 10
-  material: {fileID: 2100000, guid: 138841ef84ddc02448b1ddfe834d35f0, type: 2}
-  size: 10
-  propertyPoints: []
+  speed: 15
+  material: {fileID: 2100000, guid: df94ad1deec84cb41b17d341537a517c, type: 2}
+  size: 1.6

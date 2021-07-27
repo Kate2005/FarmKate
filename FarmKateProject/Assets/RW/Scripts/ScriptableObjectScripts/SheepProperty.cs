@@ -9,7 +9,7 @@ public class SheepProperty : ScriptableObject
     [SerializeField] private float speed;
     [SerializeField] private Material material;
     [SerializeField] private float size;
-    [SerializeField] private List<Transform> propertyPoints;
+    
     
     public string Name
     {
@@ -33,7 +33,14 @@ public class SheepProperty : ScriptableObject
     {
         get
         {
-            return speed;
+            if (speed == 0)
+            {
+                return 5f;
+            }
+            else
+            {
+                return speed;
+            }
 
         }
         //private set
@@ -44,16 +51,12 @@ public class SheepProperty : ScriptableObject
     
     //public Material Material {get{return matirial;}}//короткая форма записи       
     public Material Material => material; // get
-    public float Size
+    public Vector3 Size
     {
         get 
         {
-            return size;
-        }
-        set
-        {
-            size = value;
-        }
+            return new Vector3(size, size, size);
+        }     
     }
    
 }
