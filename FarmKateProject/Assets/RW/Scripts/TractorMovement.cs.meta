@@ -3,7 +3,11 @@ guid: b8d56379f1b7340468b525c28dc1e00f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - senoPrefab: {instanceID: 0}
+  - spawnPoint: {instanceID: 0}
+  - senoContainer: {instanceID: 0}
+  - soundManeger: {fileID: 11400000, guid: e1eca210f5b13894fbef7edf953d73f0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

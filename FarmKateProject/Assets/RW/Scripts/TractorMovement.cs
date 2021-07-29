@@ -6,21 +6,25 @@ public class TractorMovement : MonoBehaviour
 {
     enum TractorCondition { Move, Stay}
     TractorCondition tractorCondition = TractorCondition.Stay;
+    
+    [SerializeField] private SoundManeger soundManeger;
+  
 
 
-    
-    
+
 
     [SerializeField] private GameObject senoPrefab;
     [SerializeField] private Transform spawnPoint;
     [SerializeField] private float shootRate;
     private float nextShoot;
     [SerializeField] private Transform senoContainer;
+    
 
     [Header("Tractor Property")]
     [SerializeField] private float speed;
     [SerializeField] private float bounds;
     private float direction;
+    
     //private bool isPress;
     //[SerializeField] private float maxAmmo;
     // private int currentAmmo;
@@ -53,16 +57,20 @@ public class TractorMovement : MonoBehaviour
     {
         direction = 1f;
         tractorCondition = TractorCondition.Move;
+       //soundManeger.PlayArrowClickingClip();
     }
     public void PressRight()
     {
         direction = -1f;
         tractorCondition = TractorCondition.Move;
+       // soundManeger.PlayArrowClickingClip();
     }
     public void StopPress()
     {
         tractorCondition = TractorCondition.Stay;
     }
+    
+
     public void PressShoot()
     {
         if (Time.time > nextShoot)
@@ -71,6 +79,8 @@ public class TractorMovement : MonoBehaviour
             GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
             Destroy(seno, 15f);
             seno.transform.SetParent(senoContainer.transform);
+            soundManeger.PlayShootClip();
+
 
         }
         //if (Ammo > 0)

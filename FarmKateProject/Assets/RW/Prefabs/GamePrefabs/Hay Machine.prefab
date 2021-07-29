@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8d56379f1b7340468b525c28dc1e00f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundManeger: {fileID: 11400000, guid: e1eca210f5b13894fbef7edf953d73f0, type: 2}
   senoPrefab: {fileID: 6071301338592397231, guid: 7015a6e304a3c6f4788f5a9aecaf4c6b, type: 3}
   spawnPoint: {fileID: 5349907148890661137}
   shootRate: 0

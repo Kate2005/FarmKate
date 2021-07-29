@@ -77,6 +77,8 @@ public class Sheep : MonoBehaviour
         Destroy(gameObject, 0.9f);
 
         soundManeger.PlaySheepHitClip();
+        
+        
     }
     public void JumpThoughtWater()
     {
