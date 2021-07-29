@@ -19,7 +19,7 @@ public class Sheep : MonoBehaviour
     private MeshRenderer mr;
     int randomSheepPropertyIndex;
     [SerializeField] private SoundManeger soundManeger;
-
+    [SerializeField] private ScoreManager scoreManager;
 
     //public enum Movement { move, stay, jump }
     //Movement movement = Movement.move;
@@ -37,15 +37,15 @@ public class Sheep : MonoBehaviour
     private void Start()
     {
         randomSheepPropertyIndex = Random.Range(0, sheepProperty.Count);
-      
+
 
         moveSpeed = sheepProperty[randomSheepPropertyIndex].Speed;
         mr.material = sheepProperty[randomSheepPropertyIndex].Material;
         transform.localScale = sheepProperty[randomSheepPropertyIndex].Size;
 
-        Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
-        sheepProperty[randomSheepPropertyIndex].Name = "Shon";//set
-        Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
+        //Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
+        //sheepProperty[randomSheepPropertyIndex].Name = "Shon";//set
+        //Debug.Log(sheepProperty[randomSheepPropertyIndex].Name);//get
 
     }
 
@@ -77,8 +77,9 @@ public class Sheep : MonoBehaviour
         Destroy(gameObject, 0.9f);
 
         soundManeger.PlaySheepHitClip();
-        
-        
+        scoreManager.AddSaveSheep();
+
+
     }
     public void JumpThoughtWater()
     {
@@ -96,5 +97,13 @@ public class Sheep : MonoBehaviour
         moveSpeed = sheepProperty[randomSheepPropertyIndex].Speed;//состояние идти
         //movement = Movement.move
     }
-    
+    public void DestroySheep()
+    {
+        soundManeger.PlayDropClip();
+        scoreManager.AddDropSheep();
+        Destroy(gameObject);
+    }
+
 }
+
+
