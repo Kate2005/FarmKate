@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fc8f69e7c7d16244852fa9a8b3a120f, type: 3}
   m_Name: ScoreManager
   m_EditorClassIdentifier: 
-  sheepSaved: 0
-  sheepDropped: 0
+  sheepSaved: 3
+  sheepDropped: 11
   sheepDroppedBeforeGameOver: 5

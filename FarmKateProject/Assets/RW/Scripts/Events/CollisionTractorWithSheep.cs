@@ -15,8 +15,8 @@ public class CollisionTractorWithSheep : MonoBehaviour
              sheep.DestroySheep();
             //SaveSheepEvent.Invoke();
         }
-        soundManeger.PlayDropClip();
-        
+        soundManeger.PlayShootClip();
+
 
     }
 }

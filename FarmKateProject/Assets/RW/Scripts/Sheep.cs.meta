@@ -3,7 +3,10 @@ guid: df8839462c2cf3141b317365de11c523
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - particlesPrefab: {instanceID: 0}
+  - soundManeger: {fileID: 11400000, guid: e1eca210f5b13894fbef7edf953d73f0, type: 2}
+  - scoreManager: {fileID: 11400000, guid: 26ccb98246960b849aae260a206f3df6, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
