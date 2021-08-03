@@ -11,7 +11,7 @@ public class ScoreManager : ScriptableObject
     [SerializeField] private int sheepDroppedBeforeGameOver;//
 
     public int SheepSaved { get { return sheepSaved; } }
-    public int SheepDropped { get { return sheepSaved; } }
+    public int SheepDropped { get { return sheepDropped; } }
     public int SheepDroppedBeforeGameOver { get { return sheepDroppedBeforeGameOver; } }
 
     private void OnEnable()

@@ -24,15 +24,30 @@ public class TractorMovement : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float bounds;
     private float direction;
-    
+
+    [Header("SenoPool")]
+    [SerializeField] private int senoPoolSize;
+    [SerializeField] List<GameObject> senos;
+    private int currentSenoIndext;
     //private bool isPress;
     //[SerializeField] private float maxAmmo;
     // private int currentAmmo;
     //[SerializeField] private int Ammo = 5;
+    private void Awake()
+    {
+        senos = new List<GameObject>();
+    }
+
+
 
     void Start()
     {
-        //currentAmmo = maxAmmo;
+        for (int i = 0; i < senoPoolSize; i++)
+        {
+            senos.Add(Instantiate(senoPrefab));
+            senos[i].transform.SetParent(senoContainer.transform);
+            senos[i].SetActive(false);
+        }
     }
 
     
@@ -76,9 +91,18 @@ public class TractorMovement : MonoBehaviour
         if (Time.time > nextShoot)
         {
             nextShoot = Time.time + shootRate;
-            GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
-            Destroy(seno, 15f);
-            seno.transform.SetParent(senoContainer.transform);
+
+            senos[currentSenoIndext].transform.position = spawnPoint.position;
+            senos[currentSenoIndext].SetActive(true);
+
+            currentSenoIndext++;
+            if(currentSenoIndext >= senoPoolSize)
+            {
+                currentSenoIndext = 0;
+            }
+            //GameObject seno = Instantiate(senoPrefab, spawnPoint.position, Quaternion.identity); //senoPrefab.transform.rotation
+            //Destroy(seno, 15f);
+
             soundManeger.PlayShootClip();
 
 

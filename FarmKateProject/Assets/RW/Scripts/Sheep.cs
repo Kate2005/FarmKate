@@ -19,7 +19,10 @@ public class Sheep : MonoBehaviour
     private MeshRenderer mr;
     int randomSheepPropertyIndex;
     [SerializeField] private SoundManeger soundManeger;
-    [SerializeField] private ScoreManager scoreManager;
+
+    [SerializeField] private GameEvent SheepDroppedEvent;
+    [SerializeField] private GameEvent SheepSavedEvent;
+
 
     //public enum Movement { move, stay, jump }
     //Movement movement = Movement.move;
@@ -77,7 +80,7 @@ public class Sheep : MonoBehaviour
         Destroy(gameObject, 0.9f);
 
         soundManeger.PlaySheepHitClip();
-        scoreManager.AddSaveSheep();
+        SheepSavedEvent.Raise();
 
 
     }
@@ -100,7 +103,7 @@ public class Sheep : MonoBehaviour
     public void DestroySheep()
     {
         soundManeger.PlayDropClip();
-        scoreManager.AddDropSheep();
+        SheepDroppedEvent.Raise();
         Destroy(gameObject);
     }
 

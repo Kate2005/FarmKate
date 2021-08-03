@@ -28,13 +28,15 @@ public class SenoMovement : MonoBehaviour
         if (sheep != null)
         {
             sheep.SaveSheep();
-            Destroy(gameObject);
-           // Destroy(other.gameObject); 
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
+            // Destroy(other.gameObject); 
         }
 
         if (other.gameObject.tag == "SenoDestroydTrigger")//Other.CompareTag("SenoDestroydTrigger")
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
         //if (other.gameObject.name == "SenoDestroydTrigger")
         //{

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CollisionTractorWithSheep : MonoBehaviour
 {
-    [SerializeField] private SoundManeger soundManeger;
+   
    // [SerializeField] private UnityEvent SaveSheepEvent;
 
     private void OnTriggerEnter(Collider other)
@@ -15,7 +15,7 @@ public class CollisionTractorWithSheep : MonoBehaviour
              sheep.DestroySheep();
             //SaveSheepEvent.Invoke();
         }
-        soundManeger.PlayShootClip();
+       
 
 
     }

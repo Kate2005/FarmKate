@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 8045026923869767676}
   - component: {fileID: 4906544508845455895}
   - component: {fileID: 1079284329}
-  - component: {fileID: 1079284330}
   m_Layer: 0
   m_Name: Hay Machine
   m_TagString: Untagged
@@ -56,6 +55,8 @@ MonoBehaviour:
   senoContainer: {fileID: 0}
   speed: 20
   bounds: 22
+  senoPoolSize: 5
+  senos: []
 --- !u!65 &1079284329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -69,19 +70,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.252385, y: 5.1002855, z: 5.435314}
   m_Center: {x: -0.15958214, y: 2.0501432, z: 0.59404564}
---- !u!114 &1079284330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851757180499905259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87f15bbb5a9726245a8b5f8f72b30b21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  soundManeger: {fileID: 11400000, guid: e1eca210f5b13894fbef7edf953d73f0, type: 2}
 --- !u!1 &4777938758433084641
 GameObject:
   m_ObjectHideFlags: 0
