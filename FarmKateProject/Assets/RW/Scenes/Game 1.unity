@@ -1254,7 +1254,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4906544508845455895, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
   m_PrefabInstance: {fileID: 188668874193625256}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1307186423}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8d56379f1b7340468b525c28dc1e00f, type: 3}
@@ -1553,6 +1553,26 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &1307186423 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1851757180499905259, guid: 0b9a59d9ee6777f438b52a861a9a4cd9, type: 3}
+  m_PrefabInstance: {fileID: 188668874193625256}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1307186426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1307186423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f15bbb5a9726245a8b5f8f72b30b21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SaveSheepEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1437421855
 GameObject:
   m_ObjectHideFlags: 0
