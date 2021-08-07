@@ -764,6 +764,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundManeger: {fileID: 11400000, guid: e1eca210f5b13894fbef7edf953d73f0, type: 2}
+--- !u!1 &376114124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 376114126}
+  - component: {fileID: 376114125}
+  m_Layer: 0
+  m_Name: PoolManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &376114125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376114124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a9a2b700c4fb24d8ac08901b7b7325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemsToPool:
+  - pooledObjects: {fileID: 7961113904983439287, guid: 2f291f39786754c4d922422273cfe14c, type: 3}
+    poolSize: 5
+    willGrow: 1
+  pooledObjects:
+  - {fileID: 0}
+--- !u!4 &376114126
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376114124}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5140908, y: 3.2495239, z: -20.420706}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &534669902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1570,9 +1619,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f15bbb5a9726245a8b5f8f72b30b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveSheepEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1437421855
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +2014,7 @@ MonoBehaviour:
   - {fileID: 989156300}
   - {fileID: 2080150035}
   - {fileID: 2111975803}
-  sheepPrefab: {fileID: 7961113904983439287, guid: 2f291f39786754c4d922422273cfe14c, type: 3}
+  objectTag: Player
   spawnPosition: {x: 0, y: 0, z: 55}
   xSpawnBounds: {x: 22, y: -22}
   sheepCount: 5

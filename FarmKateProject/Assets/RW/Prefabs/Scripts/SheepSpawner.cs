@@ -5,12 +5,12 @@ using UnityEngine;
 public class SheepSpawner : MonoBehaviour
 {
     [SerializeField] private List<Transform> spawnPoints;
-
+    [SerializeField] private string objectTag;
 
 
 
    [Header("Sheep")]
-    [SerializeField] private GameObject sheepPrefab;//префаб овцы
+    //[SerializeField] private GameObject sheepPrefab;//префаб овцы
     [SerializeField] private Vector3 spawnPosition;//позиция спауна
     [SerializeField] private Vector2 xSpawnBounds;//границы(рандомная точка в этом диапазоне)
 
@@ -46,14 +46,20 @@ public class SheepSpawner : MonoBehaviour
         //22 - -22, 0, 55;
         float xRandomPosition = Random.Range(xSpawnBounds.x, xSpawnBounds.y);//найти рандомную позицию по х
         Vector3 randomSpawnPosition = new Vector3(xRandomPosition, spawnPosition.y, spawnPosition.z);//сформировать новую позицию
-        Instantiate(sheepPrefab, randomSpawnPosition, sheepPrefab.transform.rotation);
-        //new Vector3(Random.Range(xSpawnBounds.x, xSpawnBounds.y), spawnPosition.y, spawnPosition.z)
+        //Instantiate(sheepPrefab, randomSpawnPosition, sheepPrefab.transform.rotation);
+        //new Vector3(Random.Range(xSpawnBounds.x, xSpawnBounds.y), spawnPosition.y, spawnPosition.z);
+        
+        GameObject sheepObject = ObjectPooler.objectPooler.GetPooledObject(objectTag);
+        
+        if(sheepObject == null) { return; }//Выход из метода  
+        sheepObject.transform.position = randomSpawnPosition;
+        sheepObject.SetActive(true);
     }
  
     
-    public void CreatSheepInSpawnPoints()
-    {
-        int randomPointIndex = Random.Range(0, spawnPoints.Count);
-        Instantiate(sheepPrefab, spawnPoints[randomPointIndex].position, sheepPrefab.transform.rotation);
-    }    
+    //public void CreatSheepInSpawnPoints()
+    //{
+    //    int randomPointIndex = Random.Range(0, spawnPoints.Count);
+    //    Instantiate(sheepPrefab, spawnPoints[randomPointIndex].position, sheepPrefab.transform.rotation);
+    //}    
 }

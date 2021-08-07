@@ -66,7 +66,7 @@ public class Sheep : MonoBehaviour
 
         rb.isKinematic = false;
         rb.AddForce(Vector3.up * force);
-        moveSpeed = 0;//сделать состояние стоп//1. Отключить скорость овце на 0 или как в тракторе!!!!!!!!
+        moveSpeed = 0;//сделать состояние стоп//1. Отключить скорость овце на 0 или как в тракторе
         //if (stayMovement == Movement.stay)
         //{
         //    moveSpeed = 0;
@@ -77,8 +77,8 @@ public class Sheep : MonoBehaviour
         //спауним патикл в позиции овцы + sheepOffset
         GameObject particle = Instantiate(particlesPrefab, transform.position + sheepOffset, particlesPrefab.transform.rotation); //senoPrefab.transform.rotation
         Destroy(particle, 2f);
-        Destroy(gameObject, 0.9f);
-
+        // Destroy(gameObject, 0.9f);
+        gameObject.SetActive(false);//Добавить коорутину и таймер ДЗ!!!!!!!!!
         soundManeger.PlaySheepHitClip();
         SheepSavedEvent.Raise();
 
@@ -104,7 +104,8 @@ public class Sheep : MonoBehaviour
     {
         soundManeger.PlayDropClip();
         SheepDroppedEvent.Raise();
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 
 }
